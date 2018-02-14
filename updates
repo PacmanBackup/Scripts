@@ -1,14 +1,22 @@
+Copyright 2018 John Bennett
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files ("update"), to deal in the software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of update, and to permit persons to whom update is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 #!/bin/bash
 
 # Updates
-echo "Update started at:" > /home/john/.update.log
-date >> /home/john/.update.log
+echo "Update started at:" > /home/youruser/.update.log
+date >> /home/youruser/.update.log
 echo "Checking for and installing updates..."
-sudo pacman -Syyu >> /home/john/.update.log >> /home/john/.update.log
+sudo pacman -Syyu >> /home/youruser/.update.log >> /home/youruser/.update.log
 echo "Checking for orpaned packages..."
-sudo pacman -Qdt >> /home/john/.update.log >> /home/john/.update.log
+sudo pacman -Qdt >> /home/youruser/.update.log >> /home/youruser/.update.log
 echo "Clearing package cache..."
-sudo pacman -Sc >> /home/john/.update.log >> /home/john/.update.log
-echo "Complete!" | tee -a /home/john/.update.log
+sudo pacman -Sc >> /home/youruser/.update.log >> /home/youruser/.update.log
+echo "Complete!" | tee -a /home/youruser/.update.log
 
 echo "Updating AUR packages" sudo pacaur -Syyu >> /home/john/.aurupdate.log >> /home/john/.aurupdate.logpacaur 
