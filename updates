@@ -17,6 +17,8 @@ echo "Checking for orpaned packages..."
 sudo pacman -Qdt >> /home/youruser/.update.log >> /home/youruser/.update.log
 echo "Clearing package cache..."
 sudo pacman -Sc >> /home/youruser/.update.log >> /home/youruser/.update.log
+echo "Optimizing package database..."
+sudo pacman-optimize >> /home/youruser/.update.log >> /home/youruser/.update.log
 echo "Complete!" | tee -a /home/youruser/.update.log
 
-echo "Updating AUR packages" sudo pacaur -Syyu >> /home/john/.aurupdate.log >> /home/john/.aurupdate.logpacaur 
+echo "Updating AUR packages"  pacaur -Syyu >> /home/john/.aurupdate.log >> /home/john/.aurupdate.logpacaur 
