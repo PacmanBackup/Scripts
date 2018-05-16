@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+# Anacron script to remove old packages from pacman cache.
+
+exec Pacman -Sc >/dev/null 2>&1
+
+exit
