@@ -5,3 +5,8 @@ echo "Memory Usage:"
 free -h
 echo "Disk Usage:"
 df -h
+#echo "Disk Usage via du, if you prefer"
+#du -h
+#echo "list all files in home directory and size"
+#tree -h
+

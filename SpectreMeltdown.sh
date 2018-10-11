@@ -1,11 +1,11 @@
 
-#Copyright 2018 John Bennett. This software is licensed under the terms of the MIT license, check the LICENSES file for a complete copy of the same.
+#Copyright 2018 John Bennett. This script is licensed under the terms of the MIT license, check the LICENSES file for a complete copy of the same.
 
 #!/bin/bash
 #echo "Checking cpu architecture and status..." (can be useful on certain hardware)
 #cat /proc/cpuinfo
 
-echo "Checking whether cpu is affected by meltdown/spectre"
+echo "Checking whether cpu is effected by meltdown/spectre"
 grep cpu_insecure /proc/cpuinfo
 
 echo "If kernel config file exists in /boot check status of kpti..."
